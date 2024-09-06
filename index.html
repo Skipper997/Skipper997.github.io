@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Życzenia</title>
+    <style>
+      @font-face {
+        font-family: "Font";
+        src: url("Quicksand.ttf") format("truetype");
+      }
+
+      /* Zastosowanie fontu na całej stronie */
+      body {
+        font-family: "Font", sans-serif;
+        font-size: 20px;
+        background: rgb(186, 52, 226);
+        background: linear-gradient(
+          90deg,
+          rgba(186, 52, 226, 1) 0%,
+          rgba(236, 104, 231, 1) 30%,
+          rgba(157, 84, 254, 1) 70%,
+          rgba(226, 158, 255, 1) 100%
+        );
+      }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+
+      }
+
+      .particle-container {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .particle {
+        position: absolute;
+        width: 40px;
+        height: 60px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: float 10s ease-in-out infinite;
+        opacity: 0.1;
+      }
+
+      .balloon-red {
+        background-image: url("1.png");
+      }
+
+      .balloon-blue {
+        background-image: url("2.png");
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(100vh) translateX(0) scale(1);
+          opacity: 0;
+        }
+        50% {
+          transform: translateY(-50vh) translateX(30px) scale(1.2);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translateY(-100vh) translateX(-30px) scale(1);
+          opacity: 0;
+        }
+      }
+
+      .particle:nth-child(1) { left: 5%; animation-duration: 10s; }
+        .particle:nth-child(2) { left: 15%; animation-duration: 14s; }
+        .particle:nth-child(3) { left: 25%; animation-duration: 12.5s; }
+        .particle:nth-child(4) { left: 35%; animation-duration: 11s; }
+        .particle:nth-child(5) { left: 45%; animation-duration: 13.5s; }
+        .particle:nth-child(6) { left: 55%; animation-duration: 16s; }
+        .particle:nth-child(7) { left: 65%; animation-duration: 18s; }
+        .particle:nth-child(8) { left: 75%; animation-duration: 14.5s; }
+        .particle:nth-child(9) { left: 85%; animation-duration: 12.3s; }
+        .particle:nth-child(10) { left: 95%; animation-duration: 17s; }
+        .particle:nth-child(11) { left: 10%; animation-duration: 15s; }
+        .particle:nth-child(12) { left: 20%; animation-duration: 13s; }
+        .particle:nth-child(13) { left: 30%; animation-duration: 18.5s; }
+        .particle:nth-child(14) { left: 40%; animation-duration: 11.5s; }
+        .particle:nth-child(15) { left: 50%; animation-duration: 15.5s; }
+        .particle:nth-child(16) { left: 60%; animation-duration: 16.5s; }
+        .particle:nth-child(17) { left: 70%; animation-duration: 19s; }
+        .particle:nth-child(18) { left: 80%; animation-duration: 12s; }
+        .particle:nth-child(19) { left: 90%; animation-duration: 14.6s; }
+        .particle:nth-child(20) { left: 95%; animation-duration: 13s; }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        color: white;
+      }
+
+      .glow {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                     0 0 20px rgba(255, 255, 255, 0.6), 
+                     0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+
+      .cent {
+        padding: 15px;
+        width: 450px;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .tile {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="particle-container">
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+        <div class="particle balloon-red"></div>
+        <div class="particle balloon-blue"></div>
+    </div>
+    <div id="wishes" class="cent glow tile">
+        <h1>Wszystkiego najlepszego [nameplaceholder]</h1>
+        <p>🎉 Życzę Ci mnóstwo szczęścia, zdrowia i spełnienia wszystkich 
+            marzeń! Niech każdy dzień przynosi Ci radość, nowe wyzwania 
+            i sukcesy. Bądź otoczona miłością, wsparciem bliskich i 
+            samymi pozytywnymi ludźmi. Pamiętaj, że jesteś wspaniała 
+            i możesz osiągnąć wszystko, czego tylko zapragniesz! 🌟</p>
+    </div>
+  </body>
+</html>
